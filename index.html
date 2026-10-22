@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reindeer Games — Second Annual LG3 Holiday Tournament</title>
+<meta name="description" content="Where holiday spirit meets bad lies. The Second Annual Reindeer Games, Thursday, December 10.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#overview">Overview</a><a href="#schedule">Schedule</a><a href="#register">Register</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="home">
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <img class="crest" src="crest.png" width="640" height="622" alt="Reindeer Games crest: a reindeer in a golf cap and scarf, club over his shoulder">
+  <h1>“Where holiday spirit meets bad lies.”</h1>
+  <p class="sub">Second Annual Reindeer Games — LG3 Holiday Tournament</p>
+  <div class="count" aria-label="Countdown to Thursday, December 10">
+    <div><b id="c-days">--</b><span>Days</span></div><div><b id="c-hrs">--</b><span>Hours</span></div>
+    <div><b id="c-min">--</b><span>Min</span></div><div><b id="c-sec">--</b><span>Sec</span></div>
+  </div>
+  <div><a class="btn" href="#register">Claim a spot</a></div>
+</header>
+
+<section id="overview">
+  <div class="wrap">
+    <h2>The Tradition</h2>
+    <p>Once a year, LG3 members trade their dignity for reindeer antlers and a little holiday cheer. It started last year. That makes it a tradition. We don't make the rules, we just print them.</p>
+    <p>Expect festive golf, questionable decisions, and lies that were bad long before you got to them. Tee times will be posted once they're confirmed. Until then, stretch, hydrate, and lower your expectations.</p>
+    <div class="facts">
+      <div class="card"><h3>Field Size</h3>24 players, max</div>
+      <div class="card"><h3>Dress Code</h3>Festive. Antlers encouraged.</div>
+      <div class="card"><h3>Skill Required</h3>None. Clearly.</div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="alt">
+  <div class="wrap">
+    <h2>Schedule</h2>
+    <div class="card" style="margin-bottom:18px">
+      <h3 style="color:var(--red);margin:0 0 .4em">LG3 Holiday Dinner</h3>
+      <p style="margin:0"><strong>Wednesday, December 9</strong> · 6:30 – 9:00 PM</p>
+      <p style="margin:0">Palms Room – Tampa Palms Golf &amp; Country Club</p>
+      <p class="note" style="margin:.6em 0 0">The night before the Games. Pace yourself.</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--red);margin:0 0 .4em">Reindeer Games Tournament</h3>
+      <p><strong>Date:</strong> Thursday, December 10 <span class="note">(tentative)</span></p>
+      <p><strong>Tee times:</strong> <span class="tbd">TBD</span> <span class="note">Lou will post them once they're confirmed.</span></p>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3 style="color:var(--green);text-align:center">How to Play</h3>
+      <ul style="margin:0;padding-left:1.2em">
+        <li>Each hole is themed after one of Santa’s reindeer or holiday motifs.</li>
+        <li>Follow the scoring twist for that hole.</li>
+        <li>Keep track of points on the scorecard provided.</li>
+        <li>Highest total points at the end wins! Paying three places.</li>
+      </ul>
+      <p class="note" style="text-align:center;margin:14px 0 0">The twists themselves are a surprise. You'll find out on the tee, and so will everyone else.</p>
+    </div>
+  </div>
+</section>
+
+<section id="register">
+  <div class="wrap">
+    <h2>Registration</h2>
+    <div class="card">
+      <div class="ribbon">Field limited to 24 players</div>
+      <p id="spots" class="note" aria-live="polite">Field limited to 24 players.</p>
+      <form id="reg" novalidate>
+        <label>Name<input name="name" type="text" required maxlength="80" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+        <label>Phone (optional)<input name="phone" type="tel" maxlength="30" autocomplete="tel"></label>
+        <label>Notes / partner request<textarea name="notes" rows="3" maxlength="500" placeholder="Who do you want to be paired with? Who do you want to avoid?"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Sign me up</button>
+        <div id="msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="card" id="rosterWrap" hidden style="margin-top:18px">
+      <h3 style="color:var(--green);text-align:center">Who's in so far</h3>
+      <ul id="roster" class="roster"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <div class="gallery"><p style="font:italic 1.3rem Georgia,serif;margin:0">Photos from last year coming soon — check back!</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contacts">
+      <div class="card"><div class="ico">⛳</div><h3>Lou Zulli</h3><p class="role">For scheduling and registration questions.</p><a href="mailto:lou.zulli@live.com">✉ lou.zulli@live.com</a><p class="aside">He will answer, eventually. Do not ask him how to hit a fairway.</p></div>
+      <div class="card"><div class="ico">🏌️</div><h3>Dan Conlon</h3><p class="role">For questions about game play or rules.</p><a href="mailto:dconlon3@gmail.com">✉ dconlon3@gmail.com</a><p class="aside">His rulings are final, even when they're wrong. Especially then.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><img class="lg3" src="lg3-logo.png" width="130" alt="LG3 est. 2019"><br>Reindeer Games, Second Annual · Mulligans are not a love language.</footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
